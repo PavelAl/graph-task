@@ -1,0 +1,29 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "jsx": "react",
+        "allowJs": true,
+        "skipLibCheck": true,
+        "target": "es2018",
+        "noErrorTruncation": true,
+        "watch": false,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./src",
+        "esModuleInterop": true,
+        "paths": {
+            "~/*": ["./*"],
+            "~storybook/*": ["../.storybook/*"]
+        },
+        "plugins": [{ "transform": "ts-nameof", "type": "raw" }],
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "typeRoots": ["./node_modules/@types", "./@types"]
+    },
+    "include": ["src/**/*.test.tsx", "src/**/*.test.ts"],
+    "exclude": ["./jest.config.js", "src/**/styles.ts"]
+}

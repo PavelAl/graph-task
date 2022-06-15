@@ -1,3 +1,4 @@
-export type GraphNodeName = string;
-export type GraphPath = [GraphNodeName, GraphNodeName];
-export type Graph = GraphPath[];
+export type GraphNode = string;
+export type GraphPair = [GraphNode, GraphNode];
+export type Graph = GraphPair[];
+export type GraphPath = GraphNode[];

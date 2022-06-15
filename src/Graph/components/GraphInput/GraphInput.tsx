@@ -1,32 +1,15 @@
 import { Button, TextField } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
-import { makeStyles } from 'tss-react/mui';
 
-import { Graph } from '../Graph.types';
-
-interface GraphInputProps {
-  graph: Graph;
-  onGraphChange: (newGraph: Graph) => void;
-}
-
-export const useAddLockStyles = makeStyles({
-  name: 'GraphInput'
-})(theme => ({
-  root: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-
-    '& > *:not(:last-child)': {
-      marginRight: theme.spacing(2)
-    }
-  }
-}));
+import { useGraphInputStyles } from './styles';
+import { GraphInputProps } from './types';
 
 export const GraphInput: React.FC<GraphInputProps> = props => {
   const { graph, onGraphChange } = props;
 
   const [graphInput, setGraphInput] = useState('');
+
+  const { classes } = useGraphInputStyles();
 
   useEffect(() => {
     const newGraphInput = JSON.stringify(graph);
@@ -49,8 +32,8 @@ export const GraphInput: React.FC<GraphInputProps> = props => {
   }, [onGraphChange, graphInput]);
 
   return (
-    <section>
-      <TextField value={graphInput} onChange={handleInputChange} />
+    <section className={classes.root}>
+      <TextField value={graphInput} fullWidth multiline onChange={handleInputChange} />
 
       <Button onClick={handleGraphSubmit}>Submit</Button>
     </section>
