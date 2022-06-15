@@ -33,7 +33,7 @@ export const GraphInput: React.FC<GraphInputProps> = props => {
 
   return (
     <section className={classes.root}>
-      <TextField value={graphInput} fullWidth multiline onChange={handleInputChange} />
+      <TextField label={'Graph JSON'} value={graphInput} fullWidth multiline onChange={handleInputChange} />
 
       <Button onClick={handleGraphSubmit}>Submit</Button>
     </section>

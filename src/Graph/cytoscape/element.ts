@@ -1,16 +1,12 @@
 export interface NodeData {
-  // element data (put json serialisable dev data here)
   id: string; // mandatory (string) id for each element, assigned automatically on undefined
   parent?: string; // indicates the compound node parent id; not defined => no parent
-  // (`parent` can be effectively changed by `eles.move()`)
 }
 
 export interface EdgeData {
   id: string;
-  // inferred as an edge because `source` and `target` are specified:
   source: string; // the source node id (edge comes from this node)
   target: string; // the target node id (edge goes to this node)
-  // (`source` and `target` can be effectively changed by `eles.move()`)
 }
 export interface CytoscapeElement {
   group?: 'nodes' | 'edges'; // 'nodes' for a node, 'edges' for an edge

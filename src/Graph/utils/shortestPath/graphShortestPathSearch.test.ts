@@ -1,5 +1,6 @@
-import { Graph, GraphNode, GraphPair, GraphPath } from './Graph.types';
-import { graphShortestPathSearch } from './Graph.utils';
+import { Graph, GraphNode, GraphPair, GraphPath } from '../../Graph.types';
+
+import { graphShortestPathSearch } from './graphShortestPathSearch';
 
 const ABPair: GraphPair = ['A', 'B'];
 const ACPair: GraphPair = ['A', 'C'];

@@ -1,5 +1,5 @@
 import { Graph } from '../Graph.types';
-import { getNodesList } from '../Graph.utils';
+import { getNodesList } from '../utils';
 
 import { CytoscapeElement } from './element';
 
